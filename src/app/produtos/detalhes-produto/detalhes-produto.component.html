@@ -1,0 +1,52 @@
+<section class="product__container" *ngIf="produtoSelecionado">
+  <div class="product__image">
+<img [src]="imgPath" alt="{{ produtoSelecionado.nome }}" width="300" height="300" />  </div>
+  <div class="product-description__container">
+    <h2 class="product__name">{{ produtoSelecionado.descricao }}</h2>
+    <p class="product__price">R$ {{ produtoSelecionado.preco}}</p>
+    <p class="product__pix">{{ produtoSelecionado.descricaoPreco }}</p>
+    <p class="product__description">{{ produtoSelecionado.descricao || 'Sem descrição disponível.' }}</p>
+
+    <label for="quantidade">Quantidade:</label>
+    <input #quantidadeInput id="quantidade" type="number" min="1" value="1" />
+
+    <button class="add-to-cart" (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--section class="product__container" *ngIf="produtoSelecionado">
+  <div class="product__image">
+    <img [ngSrc]="imgPath" alt="{{ produtoSelecionado.nome }}" width="300" height="300" />
+  </div>
+
+  <div class="product-description__container">
+    <h2 class="product__name">{{ produtoSelecionado.nome }}</h2>
+    <p class="product__price">R$ {{ produtoSelecionado.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+    <p class="product__pix">{{ produtoSelecionado.descricaoPreco }}</p>
+    <p class="product__description">{{ produtoSelecionado.descricao || 'Sem descrição disponível.' }}</p>
+
+    <label for="quantidade">Quantidade:</label>
+    <input #quantidadeInput id="quantidade" type="number" min="1" value="1" />
+
+    <button class="add-to-cart" (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+  </div>
+</section-->

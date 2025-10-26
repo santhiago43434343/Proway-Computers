@@ -1,0 +1,23 @@
+<!--Caixa de busca-->
+<!--div class="busca-container">
+ <input [(ngModel)]="termoBusca" placeholder="Buscar produto..."/>
+<button (click)="buscar()"></button>
+</div-->
+
+<!--Lista de produtos-->
+<section class="produto-list">
+  <div class="produto-list__card" *ngFor="let produto of produtos">
+  <a [routerLink]="['/produto', produto.id]"  class="produto-list__link">
+  <img [src]="produto.imagem" alt="{{ produto.nome }}" width="300" height="300" />
+      <h2 class="produto-item__name">{{ produto.nome }}</h2>
+      <p class="produto-item__price">{{ produto.preco | currency: "BRL"}}</p> 
+      <!-- pipe "|" +"currency"::: cifão para real & ou moeda americana
+       para reais utiliza se a formatação::: currency:"BRL"-->
+      <p class="produto-item__price-description"> <!--a vista no PIX-->
+          {{produto.descricaoPreco }}
+      </p>
+      <button class="produto-item__buy-button" type="button">Comprar</button>
+      <button class="add-to-cart" (click)="adicionarAoCarrinho(produto)">adicionar ao carrinho</button>
+    </a>
+  </div>
+</section>
