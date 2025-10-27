@@ -2,17 +2,15 @@
 
 Este repositório contém um projeto de e-commerce desenvolvido com **Angular** e **Vite**, utilizando componentes standalone. O objetivo é demonstrar práticas modernas de desenvolvimento front-end e servir como referência para estudantes e desenvolvedores.
 
----
 
 ## 🚀 Tecnologias utilizadas
 
-- ✅ Angular com `standalone: true`
-- ⚡ Vite para build e desenvolvimento rápido
-- 🧠 TypeScript para lógica e tipagem
-- 🎨 SCSS para estilização modular
-- 🔄 Git + GitHub para versionamento e backup
+✅ Angular com `standalone: true`
+⚡ Vite para build e desenvolvimento rápido
+🧠 TypeScript para lógica e tipagem
+🎨 SCSS para estilização modular
+🔄 Git + GitHub para versionamento e backup
 
----
 
 ## 📁 Estrutura do projeto
 
@@ -40,14 +38,12 @@ Proway-Computadores/
 Este projeto é disponibilizado **exclusivamente para fins educacionais e de consulta**.  
 Você pode visualizar, estudar e clonar o repositório, mas **não é permitido modificar, redistribuir ou utilizar comercialmente** sem autorização expressa do autor.
 
----
 
 ## 🤝 Contribuições e contato
 
 Caso tenha dúvidas ou queira contribuir com sugestões, entre em contato diretamente via [GitHub Issues](https://github.com/santhiago43434343/Proway-Computers/issues) ou por mensagem privada.
 
----
 
-© **Santhiago** – Todos os direitos reservados.
+© **Santhiago**  Todos os direitos reservados.
 
 
