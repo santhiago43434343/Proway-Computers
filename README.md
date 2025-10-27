@@ -43,7 +43,7 @@ Você pode visualizar, estudar e clonar o repositório, mas **não é permitido 
 
 Caso tenha dúvidas ou queira contribuir com sugestões, entre em contato diretamente via [GitHub Issues](https://github.com/santhiago43434343/Proway-Computers/issues) ou por mensagem privada.
 
-
+creditos: capgemini programa start, todo conteudo , incluindo fontes arquivos e diretorios adicionais , é parte do programa e seus idealizadores, não sendo permitido utilização para fins comerciais.
 © **Santhiago**  Todos os direitos reservados.
 
 
