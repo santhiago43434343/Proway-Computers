@@ -16,12 +16,24 @@ Este repositório contém um projeto de e-commerce desenvolvido com **Angular** 
 
 ## 📁 Estrutura do projeto
 
-
-Proway-Computers/ ├── src/ │ ├── app/ │ │ ├── componentes: header, footer, contato, carrinho, produtos │ │ ├── serviços: produtos.service.ts, carrinho.service.ts, notificacao.service.ts │ │ ├── rotas: app.routes.ts, app.routes.server.ts │ ├── assets/ │ ├── interfaces/ │ ├── main.ts │ └── index.html ├── public/img/ → imagens dos produtos ├── angular.json ├── vite.config.ts ├── package.json ├── tsconfig.json ├── .gitignore └── README.md
-
-
-
----
+📁 Estrutura do projeto
+Proway-Computadores/
+├── src/
+│   ├── app/
+│   │   ├── componentes: header, footer, contato, carrinho, produtos
+│   │   ├── serviços: produtos.service.ts, carrinho.service.ts, notificacao.service.ts
+│   │   ├── rotas: app.routes.ts, app.routes.server.ts
+│   ├── assets/
+│   ├── interfaces/
+│   ├── main.ts
+│   └── index.html
+├── public/img/ → imagens dos produtos
+├── angular.json
+├── vite.config.ts
+├── package.json
+├── tsconfig.json
+├── .gitignore
+└── README.md
 
 ## 📌 Aviso de uso
 
