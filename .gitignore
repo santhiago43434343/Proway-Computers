@@ -5,11 +5,14 @@
 /tmp
 /out-tsc
 /bazel-out
+/e2e/test-output/
 
 # Node
 /node_modules
+/package-lock.json
 npm-debug.log
 yarn-error.log
+yarn.lock
 
 # IDEs and editors
 .idea/
@@ -36,6 +39,9 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+/.angular-cli.json
+/.ng/
+/.angular/
 
 # System files
 .DS_Store
@@ -44,18 +50,16 @@ Thumbs.db
 # vite
 .vite/
 
-# Angular build(caso use parcialmente)
-.angular/
-
 # Arquivos de ambiente
 .env
 .env.local
 .env.*.local
 
-# Arquivos temporarios e de cache
+# Arquivos temporários e de cache
 *.log
 *.tmp
 .cache/
+*.tsbuildinfo
 
 # Arquivos de testes
 *.spec.ts
