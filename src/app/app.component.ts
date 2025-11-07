@@ -8,7 +8,7 @@ import { CarrinhoComponent } from "./carrinho/carrinho.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, MatToolbarModule, CarrinhoComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MatToolbarModule,],
   templateUrl: './app.component.html',
   /*template: `<router-outlet></router-outlet>`,*/
   styleUrls: ['./app.component.scss'],

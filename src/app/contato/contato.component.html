@@ -13,7 +13,7 @@
       />
       <div class="mensagem-erro" *ngIf="formContato.get('nome')?.invalid && formContato.get('nome')?.touched">
         <small *ngIf="formContato.get('nome')?.errors?.['required']">O nome é obrigatorio</small>
-        <small *ngIf="formContato.get('nome')?.errors?.[minLength]">O nome deve ter pelo menos 4 caracteres.</small>
+        <small *ngIf="formContato.get('nome')?.errors?.['minLength']">O nome deve ter pelo menos 4 caracteres.</small>
       </div>
 
       <!--Campo assunto-->
@@ -39,7 +39,7 @@
       />
       <div class="mensagem-erro" *ngIf="formContato.get('telefone')?.invalid && formContato.get('telefone')?.touched">
         <small *ngIf="formContato.get('telefone')?.errors?.['required']">O telefone é obrigatorio</small>
-        <smail *ngIf="formContato.get('telefone')?.errors?.['pattern']">Formato invalido. Use apenas números (10 ou 11 digitos)</smail>
+        <small *ngIf="formContato.get('telefone')?.errors?.['pattern']">Formato invalido. Use apenas números (10 ou 11 digitos)</small>
       </div>
 
       <!--Campo Email-->

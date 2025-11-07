@@ -1,46 +1,66 @@
  <!-- FONTE PARA INSERÇÃO DE ICONES 
   CONFORME PROJETO
   https://fontawesome.com/icons/cart-shopping?s=solid-->
-<!--app-header></app-header-->
-<header class="main-header"> 
-<form class="search-form" (submit)="buscar()">
-   <input type="text" [(ngModel)]="termoBusca" name="buscar"/>
-   <button type="submit">
-     <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-   </form>
+<header class="main-header">
+ <h1 class="main-header__title">
+ <span class="main-header__title--blue">Proway</span>
+ <span class="main-header__title--orange">Computers</span>
+</h1>
+
+<div class="container-menu">
+  
 
 
-    <h1 class="main-header__title">
-        <!--
-        <span class="main-header__title--blue">Proway</span>
-         relacional a header.scss "line 15"
-        -->
-        <span class="main-header__title--blue">ProWay</span>
-        <span class="main-header__title--orange">Computers</span>
-    </h1>
-    <div class="container-menu">
-    <nav class="main-header__menu">
-        <ul>
-            <li>
-               <a>Produtos</a>
 
-            </li>
-            <li>
-                <a>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                Carrinho
-                <span class="badge-carrinho">{{ carrinhoService.obterCarrinho().length}}</span>
-            <!--LINHA DE CODIGO PARA 
-                CONTADOR DE PRODUTOS INSERIDOS NO CARRINHO 
-                <span class="badge-carrinho">{{ carrinhoService.obterCarrinho().length}}</span>-->
-              </a>
-        </li>
-            <li><a>Contato</a></li>
-            <li><a><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a><i class="fa-brands fa-square-instagram"></i></a></li>
-            <li><a><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
-  </div>
-</header>
+<nav class="main-header__menu">
+  <ul>
+    <!-- Botão Produtos -->
+    <li>
+        <a (click)="voltarParaProdutos()"></a>
+        <i class="fa-solid fa-list"></i>
+        Produtos
+    </li>
+
+    <!-- Botão Carrinho -->
+    <li>
+      <a routerLink="/carrinho">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Carrinho
+        <span class="badge-carrinho">{{ carrinhoService.obterCarrinho().length }}</span>
+      </a>
+    </li>
+
+    <!-- Botão Contato -->
+    <li>
+      <a routerLink="/contato">
+        <i class="fa-solid fa-envelope"></i>
+        Contato
+      </a>
+    </li>
+
+    <!-- Redes sociais -->
+    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+    <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+<!-- EMMET ✨ Como usar multiplicação de tags com Emmet
+Se você quiser gerar várias tags repetidas rapidamente, use o operador * assim:
+html
+li*3>a{Link},   li*4>a{Link}, ou quantidades de acordo suas 
+necessidades. para inserção de "ancora" <li><a> o Emmet utiliza
+o simbolo da moeda brasileira "$" para incluir::  li*3>a{Item $}
+
+
+li*3>a{Item $}
+Prefixo ou sufixo com número:
+Use $$ ou $$$ para controlar o número de dígitos:
+div*4>span{Produto $}
+-->

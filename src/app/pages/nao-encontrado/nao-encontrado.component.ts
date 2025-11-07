@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 
 @Component({
   selector: 'app-nao-encontrado',
-  imports: [],
-  templateUrl: './nao-encontrado.html',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './nao-encontrado.component.html',
   styleUrls: ['./nao-encontrado.scss']
 })
 export class NaoEncontradoComponent{

@@ -4,11 +4,11 @@ import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { IprodutoCarrinho } from '@interfaces/iproduto-carrinho';
 import { Iproduto } from '@interfaces/iproduto';
 import { produtos } from '../../../interfaces/produtos';
-import { ProdutosService } from '../../produtos.service';
+import { ProdutosService } from '@services/produtos.service';
 import { ParamMap } from '@angular/router';
-import { NotificacaoService } from '../../notificacao.service';
+import { NaoEncontradoComponent } from '@pages/nao-encontrado/nao-encontrado.component';
 import { CarrinhoService } from '@services/carrinho.service';
-
+import { NotificacaoService } from '@services/notificacao.service';
 
 @Component({
   selector: 'app-detalhes-produto',

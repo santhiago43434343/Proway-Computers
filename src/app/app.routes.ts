@@ -1,61 +1,38 @@
-
 import { Routes } from '@angular/router';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
-import { CarrinhoService } from '@services/carrinho.service';
+
 export const routes: Routes = [
-  
-{
-  path: 'produtos/:descricao',
-  loadComponent: () =>
-     import('./produtos/produtos.component').then(m => m.ProdutosComponent)
-},
-  
-{
-  path: 'contato',
-  loadComponent: () => 
-  import('./contato/contato.component').then(m => m.ContatoComponent)
-},
+  { path: '', redirectTo: 'produtos', pathMatch: 'full' },
 
-
+  // Produtos
   {
-    path: 'carrinho',
-    loadComponent: () => 
-      import('./carrinho/carrinho.component').then(m => m.CarrinhoComponent)
-
+    path: 'produtos/:descricao',
+    loadComponent: () =>
+      import('./produtos/produtos.component').then(m => m.ProdutosComponent)
   },
-
   {
     path: 'produto/:id',
     loadComponent: () =>
       import('./produtos/detalhes-produto/detalhes-produto.component').then(m => m.DetalhesProdutoComponent)
- 
   },
 
+  // Carrinho
   {
-    path: '',
+    path: 'carrinho',
     loadComponent: () =>
-      import('./produtos/produtos.component').then(m => m.ProdutosComponent)
+      import('./carrinho/carrinho.component').then(m => m.CarrinhoComponent)
   },
 
+  // Contato
   {
-    path: 'produtos',
+    path: 'contato',
     loadComponent: () =>
-      import('./produtos/produtos.component').then(m => m.ProdutosComponent)
+      import('./contato/contato.component').then(m => m.ContatoComponent)
   },
 
-  {
-    path: 'detalhes-produto/:id',
-    loadComponent: () =>
-      import('./produtos/detalhes-produto/detalhes-produto.component').then(m => m.DetalhesProdutoComponent)
-  },
-
+  // Página não encontrada (deve ser a última)
   {
     path: '**',
     loadComponent: () =>
-      import('./nao-encontrado/nao-encontrado.component').then(m => m.NaoEncontradoComponent)
-  },
-
+      import('./pages/nao-encontrado/nao-encontrado.component').then(m => m.NaoEncontradoComponent)
+  }
 ];
-
-
-  

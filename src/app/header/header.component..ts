@@ -10,25 +10,34 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-
 export class HeaderComponent implements OnInit {
-  /*Variavel de controle para o campo busca 
-  form search form ou botão de pesquisa de objetos */
-   termoBusca = '';
- 
+  // 🔍 Campo de busca
+  termoBusca: string = '';
+
   constructor(
     public carrinhoService: CarrinhoService,
-    private router: Router //adiciona o Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-
     console.log('HeaderComponent inicializado');
   }
+
+  // 🔎 Executa busca com queryParams
+  buscar(event?: Event): void {
+    if (event) event.preventDefault();
+    if (this.termoBusca.trim()) {
+      this.router.navigate(['/produtos'], {
+        queryParams: { busca: this.termoBusca },
+      });
+    }
+    console.log('Buscando por:', this.termoBusca);
+  }
+
+  // 🔁 Força recarregamento da rota /produtos
+  voltarParaProdutos(): void {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/produtos']);
+    });
+  }
 }
-
-/*CHAMADA PARA ENUMERAÇÃO DE ICONE CARRINHO EM LOCALHOST
-constructor (
-    public carrinhoService: CarrinhoService
-
- */

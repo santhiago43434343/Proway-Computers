@@ -12,7 +12,8 @@
     "test": "ng test",
     "serve:ssr:ecommerce": "node dist/main.server.mjs",
     "dev": "node --max-old-space-size=8192 node_modules/vite/bin/vite.js --host",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "git add . && git commit -m \"Atualizações\" && git push"
   },
   "prettier": {
     "printWidth": 100,

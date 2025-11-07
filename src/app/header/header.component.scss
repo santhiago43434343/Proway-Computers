@@ -67,9 +67,15 @@
 } */
 
 .badge-carrinho {
-    background-color: var(--dark-blue);
-    padding: 5px 10px;    /*padrão 5px 10px box pesquisa e icones*/
-    border-radius: 5px; /*padrão 5px*/
+    font-size: 0.75rem;
+    background-color: #800080;
+    padding: 2px 6px;    /*padrão 5px 10px box pesquisa e icones*/
+    border-radius: 12px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px; /*padrão 5px*/
     color: blueviolet; /*NUMERAL BOX CARRINHO VALOR "0"*/
 } 
 .search-form {
@@ -125,8 +131,21 @@ sombreamento caixa de pesquisa */
 
 .footer i {
     color: #ff9800; 
-
 }
+.main-header__menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.main-header__menu a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+
 
 
 /*.search-form{
