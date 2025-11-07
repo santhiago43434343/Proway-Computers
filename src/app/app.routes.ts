@@ -1,5 +1,8 @@
 import { Routes } from '@angular/router';
 
+/*GITHUB PAGES :::: */
+import { provideRouter, withHashLocation } from '@angular/router';
+
 export const routes: Routes = [
   { path: '', redirectTo: 'produtos', pathMatch: 'full' },
 
@@ -36,3 +39,7 @@ export const routes: Routes = [
       import('./pages/nao-encontrado/nao-encontrado.component').then(m => m.NaoEncontradoComponent)
   }
 ];
+
+/* PARA GITHUB PAGES ::::::::RENDERIZAÇÃO E NAVEGAÇÃO 
+DE ROTAS  */
+export const router = provideRouter (routes, withHashLocation());
