@@ -4,6 +4,7 @@ import history from 'connect-history-api-fallback';
 import path from 'path'; // ⬅️ Adicione este import
 
 export default defineConfig({
+  base: "/Proway-Computers/",
   plugins: [angular()],
   resolve: {
     alias: {
