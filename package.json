@@ -2,19 +2,19 @@
   "name": "ecommerce",
   "version": "0.0.0",
   "scripts": {
+    "build": "ng build --configuration=production --base-href=/Proway-Computers/ --output-path docs",
+    "deploy": "npm run build && git add docs && git commit -m \"Deploy automático para GitHub Pages\" && git push",
     "build:client": "vite build",
     "build:server": "tsc -p tsconfig.server.json && vite build --ssr src/main.server.ts --host",
     "serve:ssr": "node dist/ecommerce/server/server.mjs",
     "ng": "ng",
     "start": "ng serve",
-    "build": "vite build",
     "postbuild": "xcopy /E /Y docs\\browser\\* docs\\",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ecommerce": "node dist/main.server.mjs",
     "dev": "node --max-old-space-size=8192 node_modules/vite/bin/vite.js --host",
-    "preview": "vite preview",
-    "deploy": "git add . && git commit -m \"Atualizações\" && git push"
+    "preview": "vite preview"
   },
   "prettier": {
     "printWidth": 100,
@@ -62,6 +62,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "rimraf": "^6.1.0",
     "typescript": "~5.9.2"
   }
 }
