@@ -1,17 +1,25 @@
 import { Routes } from '@angular/router';
-
-/*GITHUB PAGES :::: */
 import { provideRouter, withHashLocation } from '@angular/router';
 
 export const routes: Routes = [
+  // Redireciona raiz para /produtos evitando 404 
   { path: '', redirectTo: 'produtos', pathMatch: 'full' },
 
-  // Produtos
+  // Produtos sem parâmetro
+  {
+    path: 'produtos',
+    loadComponent: () =>
+      import('./produtos/produtos.component').then(m => m.ProdutosComponent)
+  },
+
+  // Produtos com parâmetro para inibir erro 404 
   {
     path: 'produtos/:descricao',
     loadComponent: () =>
       import('./produtos/produtos.component').then(m => m.ProdutosComponent)
   },
+
+  // Detalhes do produto
   {
     path: 'produto/:id',
     loadComponent: () =>
@@ -32,7 +40,7 @@ export const routes: Routes = [
       import('./contato/contato.component').then(m => m.ContatoComponent)
   },
 
-  // Página não encontrada (deve ser a última)
+  // Página não encontrada
   {
     path: '**',
     loadComponent: () =>
@@ -40,6 +48,5 @@ export const routes: Routes = [
   }
 ];
 
-/* PARA GITHUB PAGES ::::::::RENDERIZAÇÃO E NAVEGAÇÃO 
-DE ROTAS  */
-export const router = provideRouter (routes, withHashLocation());
+// Configuração para GitHub Pages (hash-based routing)
+export const router = provideRouter(routes, withHashLocation());

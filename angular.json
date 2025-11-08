@@ -27,6 +27,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "docs",
+            "deployUrl": "/",
             "index": "src/index.html",
             "baseHref": "/Proway-Computers/",
             "browser": "src/main.ts",
