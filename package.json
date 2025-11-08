@@ -8,6 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "vite build",
+    "postbuild": "xcopy /E /Y docs\\browser\\* docs\\",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ecommerce": "node dist/main.server.mjs",
