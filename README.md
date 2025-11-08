@@ -35,7 +35,7 @@ Proway-Computadores/
 │   ├── interfaces/
 │   ├── main.ts
 │   └── index.html
-├── public/img/ → imagens dos produtos
+├── public./public/img/ → imagens dos produtos
 ├── angular.json
 ├── vite.config.ts
 ├── package.json
