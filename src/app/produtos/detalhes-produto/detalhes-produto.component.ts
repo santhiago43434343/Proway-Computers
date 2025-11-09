@@ -50,7 +50,7 @@ export class DetalhesProdutoComponent implements OnInit {
     this.produtoSelecionado = produtos.find(p => p.id === this.produtoId);
    
    if (!this.produtoSelecionado) {
-     this.router.navigateByUrl('/pagina-nao-encontrada' as string);
+     this.router.navigateByUrl('/404');
      return;
 
    }

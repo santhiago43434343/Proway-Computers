@@ -6,6 +6,13 @@ export const routes: Routes = [
   { path: '', redirectTo: 'produtos', pathMatch: 'full' },
 
   // Produtos sem parâmetro
+
+  {
+  path: '404',
+  loadComponent: () =>
+    import('./pages/nao-encontrado/nao-encontrado.component').then(m => m.NaoEncontradoComponent)
+},
+
   {
     path: 'produtos',
     loadComponent: () =>
