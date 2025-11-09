@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { provideRouter, withHashLocation } from '@angular/router';
+import { environment } from '../environments/environment';
 
 export const routes: Routes = [
   // Redireciona raiz para /produtos evitando 404 
@@ -47,7 +48,7 @@ export const routes: Routes = [
       import('./contato/contato.component').then(m => m.ContatoComponent)
   },
 
-  // Página não encontrada
+  // Página não encontrada?
   {
     path: '**',
     loadComponent: () =>
@@ -55,6 +56,38 @@ export const routes: Routes = [
   }
 ];
 
+/*em casos de manter sempre um array::
+localhost:: para /producao
+github pages para Hash "#" /#/producao
+environments::
+environment.ts
+environment.prod.ts*/ 
+
+export const router = provideRouter(
+  routes,
+  ...(environment.useHash ? [withHashLocation()] : [])
+);
+
+
+
+
+
+/*Operador spread para passar uma lista de freatures corretamente::: */
+
+/*export const router = provideRouter(
+  routes,
+  environment.useHash ? whitHashLocation() : undefined
+); */
+
+
+
 // Configuração para GitHub Pages (hash-based routing)
-const isProd = import.meta.env.MODE === 'production';
-export const router = provideRouter(routes, withHashLocation());
+/*export const router = provideRouter(routes, environment.useHash ? withHashLocation() : []);*/
+
+
+
+/* 
+
+ "vendorChunk": false,
+ "buildOptimizer": false 
+    */

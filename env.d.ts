@@ -1,4 +1,5 @@
-/* app routes ts , import para meta.env.MODE */
+/* app routes ts , import para meta.env.MODE 
+definição & ou separação para github pages e localhost*/
 //const isProd = import.meta.env.MODE === 'production';
 
 
