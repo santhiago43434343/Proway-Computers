@@ -11,7 +11,7 @@
   <div class="produto-list__card" *ngFor="let produto of produtos">
     
     <!-- Link para detalhes do produto -->
-    <a [routerLink]="['/produto', produto.id]" class="produto-list__link">
+    <a [routerLink]="['produto', produto.id]" class="produto-list__link">
       <img [src]="produto.imagem" alt="{{ produto.nome }}" width="300" height="300" />
       <h2 class="produto-item__name">{{ produto.nome }}</h2>
       <p class="produto-item__price">{{ produto.preco | currency: 'BRL' }}</p>
