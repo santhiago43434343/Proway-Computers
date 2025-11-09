@@ -56,4 +56,5 @@ export const routes: Routes = [
 ];
 
 // Configuração para GitHub Pages (hash-based routing)
+const isProd = import.meta.env.MODE === 'production';
 export const router = provideRouter(routes, withHashLocation());

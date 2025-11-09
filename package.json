@@ -2,6 +2,8 @@
   "name": "ecommerce",
   "version": "0.0.0",
   "scripts": {
+    "build:local": "ng build --configuration=development --base-href=/",
+    "build:gh": "ng build --configuration=production --base-href=/Proway-Computers/ --output-path docs",
     "build": "ng build --configuration=production --base-href=/Proway-Computers/ --output-path docs",
     "deploy":"npm run build && npm run postbuild && git add docs && git commit -m \"Deploy automático para GitHub Pages\" && git push",
     "build:client": "vite build",

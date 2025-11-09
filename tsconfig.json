@@ -31,6 +31,10 @@
     "strictTemplates": true
   },
   "files": [],
+  "include": [
+    "src/**/*.ts",
+    "env.d.ts"
+  ],
   "references": [
     {
       "path": "./tsconfig.app.json"
