@@ -4,7 +4,7 @@ import history from 'connect-history-api-fallback';
 import path from 'path'; // ⬅️ Adicione este import
 
 export default defineConfig({
-  base: "/PrivacyComputer/",
+  base: "/PrivacyComputer/", /*PARA URL GITHUB PAGES */
   plugins: [angular()],
   resolve: {
     alias: {
@@ -41,12 +41,4 @@ export default defineConfig({
 });
 
 
-
-
-
-
-
-
-
-
-
+ 
