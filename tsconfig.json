@@ -33,7 +33,7 @@
   "files": [],
   "include": [
     "src/**/*.ts",
-    "env.d.ts"
+  
   ],
   "references": [
     {

@@ -2,10 +2,11 @@
   "name": "ecommerce",
   "version": "0.0.0",
   "scripts": {
+    "dev:ng": "vite --port 4200",
     "build:local": "ng build --configuration=development --base-href=/",
     "build:gh": "ng build --configuration=production --base-href=/Proway-Computers/ --output-path docs",
     "build": "ng build --configuration=production --base-href=/Proway-Computers/ --output-path docs",
-    "deploy":"npm run build && npm run postbuild && git add docs && git commit -m \"Deploy automático para GitHub Pages\" && git push",
+    "deploy": "npm run build && npm run postbuild && git add docs && git commit -m \"Deploy automático para GitHub Pages\" && git push",
     "build:client": "vite build",
     "build:server": "tsc -p tsconfig.server.json && vite build --ssr src/main.server.ts --host",
     "serve:ssr": "node dist/ecommerce/server/server.mjs",
@@ -16,7 +17,7 @@
     "test": "ng test",
     "serve:ssr:ecommerce": "node dist/main.server.mjs",
     "dev": "node --max-old-space-size=8192 node_modules/vite/bin/vite.js --host",
-    "preview": "vite preview"
+    "preview": "vite preview --port 8080"
   },
   "prettier": {
     "printWidth": 100,
@@ -32,6 +33,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.3.3",
     "@angular/cdk": "^20.2.8",
     "@angular/common": "^20.3.3",
     "@angular/compiler": "^20.3.3",

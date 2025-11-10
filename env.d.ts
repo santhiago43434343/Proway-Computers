@@ -3,10 +3,10 @@ definição & ou separação para github pages e localhost*/
 //const isProd = import.meta.env.MODE === 'production';
 
 
-/// <reference types="vite/client" />
+/// <!reference types="vite/client" /-->
 
 
-interface ImportMetaEnv {
+/*interface ImportMetaEnv {
   readonly MODE: string;
   // você pode adicionar outras variáveis aqui, ex:
   // readonly VITE_API_URL: string;
@@ -14,4 +14,4 @@ interface ImportMetaEnv {
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
-}
+}*/
