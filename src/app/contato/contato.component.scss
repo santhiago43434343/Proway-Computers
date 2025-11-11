@@ -1,88 +1,31 @@
-$vermelho: #ff0000;
-
-.contact__title {
-  font-size: 44px;
-  color: var(--gray);
-  font-weight: 700;
-  padding: 8px 0;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-
-  input, textarea, select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .send-button {
-    background-color: white;
-    border: none;
-    color: $vermelho;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 22px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-
-    &:hover {
-      background-color: $vermelho;
-      color: white;
-    }
-
-    &:disabled {
-      background-color: var(--gray);
-      color: white;
-
-      &:hover {
-        filter: none;
-      }
-    }
-
-    &:active {
-      transform: scale(0.98);
-    }
-  }
-}
-
-.contact__container {
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 20px;
-  padding: 20px 0;
-  justify-content: center;
-  align-items: flex-start;
-}
+@use '@styles/variables' as *;
 
 .mensagem-erro {
- color:red;
- font-size:0.85rem;
- margin-top:4px;
+  color: $error;
+  font-size: 0.85rem;
+  margin-top: 4px;
 }
-input.valid, textarea.valid{
-  border: 2px solid green;
+
+input.valid,
+textarea.valid {
+  border: 2px solid $success;
 }
-input.invalid, textarea.invalid {
-  border: 2px solid red;
+
+input.invalid,
+textarea.invalid {
+  border: 2px solid $error;
 }
 
 .contador-caracteres {
   font-size: 0.85rem;
-  margin-top:4px;
+  margin-top: 4px;
   color: #555;
 
   &.alerta {
-    color: orange;
+    color: $warning;
   }
+
   &.limite {
-    color:red;
+    color: $error;
   }
 }
-

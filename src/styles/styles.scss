@@ -1,0 +1,25 @@
+@use '@styles/variables' as *;
+@use '@styles/spacing' as *;
+@use '@styles/breakpoints' as *;
+@use '@styles/mixins' as *;
+@use '@styles/base';
+@use '@styles/global';
+@use '@styles/layout';
+
+//Define variaveis CSS para uso com var(--color) em componentes que usam CSS puro
+:root {
+  --blue: #007bff;
+  --orange: #ff9800;
+  --gray: #000000;
+  --light-gray: #f6f6f6;
+  --dark-blue: #003366;
+}
+
+//Estilos globais
+body {
+   font-family: $font-family-base;
+   font-size: $font-size-base;
+   margin: 0;
+   background-color: $light-gray;
+   color: $gray;
+}

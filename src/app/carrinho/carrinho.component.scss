@@ -1,75 +1,72 @@
+// Importa variáveis globais
+@use '@styles/variables' as *;
+@use '@styles/spacing' as *;
+
 .cart-title {
-    font-size: 44px;
-    color: var(--gray);
-    font-weight: 700;
-    padding: 8px 0;
+  font-size: 44px;
+  color: $gray;        // antes: var(--gray)
+  font-weight: 700;
+  padding: $spacing-xs 0; // antes: 8px 0
 }
 
 li {
-    display: flex;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 10px 0;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: $spacing-sm 0; // antes: 10px 0
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 img {
-    width: 100px;
-    height: 100px;
-    display: block;
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 .remove-button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 20px;
-    height: 100%;
-    transition: .2s all;
+  background-color: $error; // antes: red
+  border: none;
+  color: $white;
+  padding: $spacing-md;     // antes: 20px
+  height: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 .remove-button:hover {
-    filter: brightness(0.9);
+  filter: brightness(0.9);
 }
 
 .cart-total {
-    font-size: 24px;
-    color: var(--gray);
-    font-weight: 700;
-    padding: 8px 0;
+  font-size: 24px;
+  color: $gray;        // antes: var(--gray)
+  font-weight: 700;
+  padding: $spacing-xs 0; // antes: 8px 0
 }
 
 input {
-    width: 30px;
-    text-align: center;
+  width: 30px;
+  text-align: center;
 }
-
 
 /* botão comprar em carrinho */
-$vermelho: #ff0000;
-
 .buy-button {
-    background-color: var(--red);
-    border: none;
-    color: #ff0000;
-    background-color:white;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 22px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s all ease, color 0.3s ease;;
+  background-color: $white; // antes: white
+  border: none;
+  color: $error;            // antes: #ff0000
+  border-radius: 5px;
+  padding: $spacing-sm;     // antes: 10px
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 22px;
+  margin-bottom: $spacing-sm; // antes: 10px
+  transition: background-color 0.3s ease, color 0.3s ease;
 
-   &:hover { 
-    background-color: $vermelho;
-    color:white;
-}
-
-.buy-button:hover {
+  &:hover { 
+    background-color: $error; // usa variável Sass
+    color: $white;
     filter: brightness(0.9);
   }
 }

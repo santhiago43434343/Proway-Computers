@@ -1,59 +1,69 @@
-/* style scss de capgemini
- line 3 a 63  angular 20+ */
+// Importa variáveis globais
+@use '@styles/variables' as *;
+@use '@styles/spacing' as *;
+
 .footer {
-    background-color: var(--light-gray);        
-    color: var(--gray);
-    font-size: 18px; /*18px*/
+  background-color: $light-gray;
+  color: $gray;
+  font-size: 18px;
+  box-shadow: 0px -70px 70px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, $light-gray, $light-gray-2);
 }
-/*SOMBREAMENTO POR TRAS DE SUBTITULO & ICONES */
-.footer {
-  background-color: var(--light-gray);
-  box-shadow: 0px -70px 70px rgba(0, 0, 0, 0.1)
-}
-/*  box-shadow: 0px -70px 70px rgba(0, 0, 0, 0.1)*/
+
 .footer__container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    padding: 20px; /*padrão 20px texto "sobre" & "contato" */
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  padding: $spacing-md; // antes: 20px
 }
-
-.footer__copyright {
-    text-align: center;
-    margin-top: 20px;
-    background-color: var(--light-gray-2);    
-    font-weight: bold;
-    padding: 20px;
-    color: var(--gray);
-}
-
-.footer__title {
-    font-size: 22px; /*title "sobre padrão 22px*/
-    font-weight: bold;
-    color: var(--blue);
-    margin-bottom: 5px; /*5px padrão*/
-}
-
-.footer__about-text {
-    width: 400px; /*LARGURA TEXTO "sobre"*/
-    text-align: justify;
-}
-
-
-.footer i {
-    color: #ff9800;  /*var(--orange);*/ 
-}
-
-.footer li {
-    margin: 10px 0;/*10px 0*/
-}
-
-/*TESTE ABAIXO PARA RENDERIZAÇÃO LINE 46 A 61*/
 
 .footer__container > div {
   flex: 1;
   min-width: 250px;
-  margin: 10px;
+  margin: $spacing-sm; // antes: 10px
+  background-color: $light-gray-2;
+  padding: $spacing-xs; // antes: 8px
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: $spacing-md; // antes: 20px
+  background-color: $light-gray-2;
+  font-weight: bold;
+  padding: $spacing-md; // antes: 20px
+  color: $gray;
+}
+
+.footer__title {
+  font-size: 22px;
+  font-weight: bold;
+  color: $blue;
+  margin-bottom: $spacing-xs; // antes: 5px
+  background-color: $light-gray-2;
+  padding: $spacing-xs; // antes: 10px
+  border-radius: 9px;
+  box-shadow: -2px 89px 9px rgba(0, 0, 0, 0.1);
+}
+
+.footer__about-text {
+  width: 400px;
+  text-align: justify;
+}
+
+.footer i {
+  font-size: 20px;
+  margin-right: $spacing-xs; // antes: 8px
+  color: $orange;
+}
+
+.footer li {
+  margin: $spacing-sm 0; // antes: 10px 0
+  background-color: $light-gray-2;
+  padding: $spacing-xs; // antes: 8px
+  border-radius: 9px;
+  box-shadow: -2px 89px 9px rgba(0, 0, 0, 0.1);
 }
 
 .footer ul {
@@ -62,86 +72,15 @@
   margin: 0;
 }
 
-.footer i {  /*cor icones "email" "whatsapp" "phone"*/ 
-  font-size: 20px;
-  margin-right: 8px;
-  color: #ff9800; /*teste::
-  não houve exito :: var(--orange);*/
-}
-/*EXAMPLE DE COPILOT ABAIXO
-line 63 a 68 */
-:root {
-    --light-gray: #f2f2;
-    --gray: #888;
-    --light-gray-2: #e0e0e0;
-    --blue: #007bff;
-    --orange: #ff9800;
-} 
-
-/*TESTE COPILOT 3 LINE 76 A 80 */
- i.fa-envelope,
- i.fa-whatsapp,
- i.fa-phone {
-   color: var(--orange)
- }
-
-/*TESTE */
-.footer__title {
-  font-size: 29px; /*22px fonte "contato"*/
-  font-weight: bold;
-  color: var(--blue);
-  margin-bottom: 9px; /*5px*/
-  background-color: var(--light-gray-2);
-  padding: 10px; /*10 px*/
-  border-radius: 9px; /*4px*/
-
-}
-
 address {
-  background-color: var(--light-gray-2);
-  padding: 15; /*15*/
-  border-radius: 6px; /*6px*/
+  background-color: $light-gray-2;
+  padding: $spacing-sm; // antes: 15px
+  border-radius: 6px;
 }
 
-.footer li {
-  background-color: var(--light-gray-2); 
-  padding: 8px; /*8px*/
-  border-radius: 9px; /*4px*/
+/* Ícones específicos */
+i.fa-envelope,
+i.fa-whatsapp,
+i.fa-phone {
+  color: $orange;
 }
-
-.footer__title,
-.footer li { /*SOMBREAMENTO POR TRAS DE SOBRE & DADOS DE
-  CONTATO */
- /*box-shadow: 0 80px 7px rgba(0, 0, 0, 0.1);*/
-  background-color: var(--light-gray);
-  box-shadow: -2px 89px 9px rgba(0, 0, 0, 0.1)
-}
-
-/*padron::  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-*/
-
-/*.footer {
-  background-color: var(--light-gray-2); // ou qualquer cor desejada
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px; // opcional, para bordas arredondadas
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // sombra suave
-}
-*/
-.footer__title {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--blue);
-  margin: 0;
-}
-
-.footer{ /*#f2f2f2, #e0e0e0 */
-  background: linear-gradient(to right, #f2f2f2, #e0e0e0);
-}
-
-.footer__container > div {
-background-color:var(--light-gray-2);
-padding: 8px;
-border-radius: 8px; /*8*/
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-} 

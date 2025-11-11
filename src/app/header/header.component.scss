@@ -1,175 +1,106 @@
-.main-header {    
-    padding: 10px 0px;/*padrão 10px 0px, largura de pagina e seus componentes */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 40px;  /* padrão 40px*/
-}
+@use '@styles/variables' as *;
+@use '@styles/spacing' as *;
+@use '@styles/mixins' as *;
+@use "sass:color";
 
-.main-header__title {    
-    font-size: 80px;  /*padrão 80px 1.5px
-    ajuste de informações para toda pagina*/
-    letter-spacing: -3.5px; /*ajuste da largura do
-    title "ProWayComputers */   
+.main-header {
+  padding: $spacing-md 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: $spacing-lg;
 }
 
 .main-header__title--blue {
-    color: var(--blue);
-    color: blue;
-    font-size:60px;
+  color: $blue;
+  font-size: 68px;
 }
 
 .main-header__title--orange {
-    color: var(--orange);
-    color: orange;
-    font-size:60px;
+  color: $orange;
+  font-size: 60px;
 }
 
 .main-header__menu ul {
-    display: flex;
-    justify-content: flex-end;
-}
-/* INSERÇÃO DE AJUSTE DE ACORDO COPILOT */
-
-.main-header__menu ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0; /* padding: padrão 0
-    margin: 0 largura de box & ou caixa de 
-    pesquisa para lado esquerdo */
-    margin: 0; 
-}
-
-
-.main-header__menu a {/*conjunto menu carrinho
-    produtos contato e icones*/
-    padding: 10px 10px; /*padrões 10px 10px*/
-    color: var(--gray);
-    font-weight: 40px; /* padrão 40px*/
-    font-size: 22px; /*padrão 22 conjunto de icones 
-    produtos carrinho contato */
-    text-decoration: none;
-    transition: all .3s ease-in-out;/*padrão 3s*/
-}
-
-.main-header__menu a:hover {
-    background-color: var(--blue);
-    color: #fff;
-}
-
-/*.container-menu {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    flex: 1;
-} */
-
-.badge-carrinho {
-    font-size: 0.75rem;
-    background-color: #800080;
-    padding: 2px 6px;    /*padrão 5px 10px box pesquisa e icones*/
-    border-radius: 12px;
-    line-height: 1;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -1px; /*padrão 5px*/
-    color: blueviolet; /*NUMERAL BOX CARRINHO VALOR "0"*/
-} 
-.search-form {
-  height: 56px;
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;    
-/*margin-top:: caixa de dialogo
-abaixo de icones "produtos,carrinho,contato"
-PADRÃO 8px 20px*/
-} 
-
-.search-form input {
-  box-sizing: border-box;
-  height: 56px;   /*padrão: 56 px caixa de pesquisa*/
-  padding: 0 20px; /*padrão 0 20px*/
-  flex: 1;       /*padrão 1*/
-  background-color: var(--light-gray);
-  color: var(--gray);
-  border: none;
-  font-size: 22px;  /*PADRÃO 22px*/
-  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.3);/*CAIXA DE DIALOGO*/
-  transition: all 0.3s ease-in-out; /*padrão 0.3s*/
-  border-radius: 4px; /*padrão:: 4px*/
-} /*PADRÃO::
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-sombreamento caixa de pesquisa */
-
-.search-form button {
-  width: 56px;
-  height: 56px;
-  background-color: var(--blue);
-  border: none;
-  color: #334422; /*PADRÃO #fff*/
-  font-size: 22px;
-  cursor: pointer;
-  border-radius: 4px;    /*PADRÃO 4px*/
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease-in-out;
-}  /*LUPA ABAIXO DO ICONE LINKEDIN:::
- PADRÃO:: 0 2px 6px rgba(0, 0, 0, 0.2)*/
-
-.search-form button:hover {
-  background-color: #005fa3;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/*TESTE PARA FOOTER.SCSS COPILOT*/
-.main-header i {
-  color: #ff9800; /*cor icones carrinho e redes
-  sociais */
-}
-
-.footer i {
-    color: #ff9800; 
-}
 .main-header__menu a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  padding: $spacing-sm $spacing-sm;
+  color: $gray;
+  font-size: 22px;
   text-decoration: none;
-  color: inherit;
+  transition: all 0.3s ease-in-out;
 }
+
 .main-header__menu a:hover {
-  color: #ff6600;
+  background-color: $blue;
+  color: #fff;
   text-decoration: underline;
 }
 
-
-
-
-/*.search-form{
-    height: 44px;
-    display: flex;
+.badge-carrinho {
+  font-size: 0.75rem;
+  background-color: purple;
+  padding: 2px 6px;
+  border-radius: 12px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  color: blueviolet;
 }
 
-.search-form input{
-    box-sizing: border-box;
-    height: 56px;
-    padding: 28px;
-    flex:1;
-    background-color: var(--light-gray);
-    color: var(--gray);
-    border: none;
-    transition: all -3s ease-in-out;
-    font-size: 22px;
+.search-form {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
 }
 
-.search-form button{
-    width: 56px;
-    height: 56px;
-    background-color: var(--blue);
-    border:none;
-    color: #fff;
-    font-size: 22px;
-}*/
+.search-form input {
+  box-sizing: border-box;
+  height: 56px;
+  padding: 0 $spacing-md;
+  flex: 1;
+  background-color: $light-gray;
+  color: $gray;
+  border: none;
+  font-size: 22px;
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.search-form button {
+  width: 56px;
+  height: 56px;
+  background-color: $blue;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-form button:hover {
+  background-color: color.scale($blue, $lightness: -10%);
+}
+
+.main-header i,
+.footer i {
+  color: $orange;
+}

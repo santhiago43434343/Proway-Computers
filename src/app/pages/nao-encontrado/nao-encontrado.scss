@@ -1,13 +1,22 @@
+// importação para variaveis globais
+@use '@styles/variables' as *;
+@use '@styles/spacing' as *;
+@use "sass:color";
+
 .erro-404 {
   text-align: center;
-  margin-top: 100px;
-  color: #ff4c4c;
+  margin-top: $spacing-xl; // antes:100px
+  color: $error;     // antes: #ff4c4c
 
-   a{
-    display: inLine-block;
-    margin-top:20px;
-    color: #007bff;
+  a {
+    display: inline-block; // corrigido: "inLine-block" "inLine-block"
+    margin-top: $spacing-md; // antes 20px
+    color: $blue;   //antes #007bff
     text-decoration: underline;
-
-    }
+    transition: color 0.3s ease-in-out;
+  
+  }
+  a:hover {
+    color: color.adjust($blue, $lightness: -10%);
+  }
 }
