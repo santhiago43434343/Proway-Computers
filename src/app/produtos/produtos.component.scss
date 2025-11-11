@@ -1,4 +1,4 @@
-@use '@styles/variables' as *; // importa as variáveis globais
+@use 'variables' as *; // importa as variáveis globais
 
 .product-item__price {
   color: $error; // usa a variável Sass
